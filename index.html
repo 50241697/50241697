@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio · Bootstrap</title>
     
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
@@ -13,10 +12,8 @@
             max-width: 42em;
         }
 
-        /* PERSONALIZACIÓN */
         body {
-            background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), 
-            url('https://images.unsplash.com/photo-1497290756760-23ac55edf36f?auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1497290756760-23ac55edf36f?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             font-family: 'Segoe UI', sans-serif;
@@ -49,12 +46,27 @@
             border-bottom-color: #00d4ff;
         }
 
-        /* FOTO PERFIL */
+        /* MÁS ESPACIO ENTRE LINKS */
+        .nav-masthead .nav-link + .nav-link {
+            margin-left: 2rem;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-masthead {
+                gap: 1rem;
+            }
+        }
+
         .profile-img {
             width: 120px;
             border-radius: 50%;
             margin-bottom: 20px;
             border: 3px solid white;
+        }
+
+        section {
+            margin-top: 80px;
         }
     </style>
 </head>
@@ -67,34 +79,32 @@
             <div>
                 <h3 class="float-md-start mb-0">Mi Portfolio</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" href="index.html">Inicio</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="blog.html">Blog</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="contacto.html">Contacto</a>
+                    <a class="nav-link fw-bold py-1 px-0 active" href="#inicio">Inicio</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#proyectos">Proyectos</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#contacto">Contacto</a>
                 </nav>
             </div>
         </header>
 
-        <main class="px-3">
+        <!-- INICIO -->
+        <main id="inicio" class="px-3">
             
-            <!-- FOTO -->
-            <img src="https://www.google.com/imgres?q=perfil&imgurl=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F12225%2F12225881.png&imgrefurl=https%3A%2F%2Fwww.flaticon.es%2Ficono-gratis%2Ffoto-de-perfil_12225881&docid=w9DxIzRpDwwIlM&tbnid=CdN9DCmKq973iM&vet=12ahUKEwiX1c-glcSTAxW6LbkGHWGNEKAQnPAOegQIExAB..i&w=512&h=512&hcb=2&ved=2ahUKEwiX1c-glcSTAxW6LbkGHWGNEKAQnPAOegQIExAB" class="profile-img" alt="perfil">
+            <img src="https://i.pravatar.cc/150" class="profile-img" alt="perfil">
 
             <h1>Bienvenido a mi Portfolio</h1>
 
             <p class="lead">
-                Soy desarrollador web en formación. Me interesa el diseño, frontend y crear experiencias visuales atractivas.
+                Soy desarrollador web en formación. Me interesa el diseño y el desarrollo frontend.
             </p>
 
-            <!-- HABILIDADES -->
             <p>
                 HTML · CSS · Bootstrap · JavaScript
             </p>
 
             <p class="lead">
-                <a href="blog.html" class="btn btn-lg btn-custom fw-bold">Ver Proyectos</a>
+                <a href="#proyectos" class="btn btn-lg btn-custom fw-bold">Ver Proyectos</a>
             </p>
 
-            <!-- ENLACES EXTERNOS -->
             <p>
                 <a href="https://github.com/" target="_blank" class="text-white">GitHub</a> |
                 <a href="https://linkedin.com/" target="_blank" class="text-white">LinkedIn</a> |
@@ -103,12 +113,24 @@
 
         </main>
 
+        <!-- PROYECTOS -->
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <p>🔹 Proyecto 1: Página web personal</p>
+            <p>🔹 Proyecto 2: Portfolio con Bootstrap</p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Email: tuemail@gmail.com</p>
+        </section>
+
         <footer class="mt-auto text-white-50">
             <p>Hecho con Bootstrap · 2026</p>
         </footer>
     </div>
 
-    <!-- JS correcto -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
