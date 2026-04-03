@@ -1,139 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio · Bootstrap</title>
+    <title>Portfolio · Ilan Auzunbud</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
-        .cover-container {
-            max-width: 42em;
+        
+        body {
+            background-color: #081b29; 
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
 
-        body { 
-            background-image: 
-            url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: 'Segoe UI', sans-serif;
+        h1, h2, h3, .azul-llan {
+            color: #00abf0; 
         }
 
-        h1, h3 {
-            color: #00d4ff;
+        
+        .header-personalizado {
+            padding: 20px 0;
         }
 
+        .nav-link {
+            color: white !important;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #00abf0 !important;
+        }
+
+        
+        .perfil-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #00abf0;
+            object-fit: cover; 
+            margin-bottom: 20px;
+        }
+
+        
         .btn-custom {
-            background-color: #00d4ff;
-            color: black;
+            background-color: #00abf0;
+            color: #081b29;
+            font-weight: 600;
+            border: none;
+            padding: 10px 30px;
         }
 
         .btn-custom:hover {
-            background-color: #00aacc;
+            background-color: white;
+            color: #00abf0;
         }
 
-        .nav-masthead .nav-link {
-            color: rgba(255, 255, 255, .6);
-            border-bottom: .25rem solid transparent;
-        }
-
-        .nav-masthead .nav-link:hover {
-            border-bottom-color: #00d4ff;
-        }
-
-        .nav-masthead .active {
-            color: #fff;
-            border-bottom-color: #00d4ff;
-        }
-
-        .nav-masthead .nav-link + .nav-link {
-            margin-left: 2rem; /* más separación */
-        }
-
-        @media (max-width: 768px) {
-            .nav-masthead {
-                gap: 1rem;
-            }
-        }
-
-        .profile-img {
-            width: 120px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 3px solid white;
-        }
-
+        
         section {
-            margin-top: 80px;
+            padding: 100px 0;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
-        .estudio {
-            background-color: blue
-                   }
+        
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 25px;
+            color: #00abf0;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.4s;
+        }
+
+        .social-media a:hover {
+            border-color: white;
+            color: white;
+        }
     </style>
 </head>
 
-<body class="d-flex h-100 text-center text-bg-dark">
+<body>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <div class="cover-container w-100 p-3 mx-auto">
+    <div class="container d-flex w-100 h-100 flex-column">
 
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Mi Portfolio</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" href="#inicio">Inicio</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#proyectos">Proyectos</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#contacto">Contacto</a>
-                </nav>
-            </div>
- 
+        <header class="header-personalizado d-flex justify-content-between align-items-center">
+            <h3 class="mb-0 fw-bold azul-llan">Ilan</h3>
+            <nav class="nav">
+                <a class="nav-link fw-bold" href="#inicio">Inicio</a>
+                <a class="nav-link fw-bold" href="#proyectos">Proyectos</a>
+                <a class="nav-link fw-bold" href="#contacto">Contacto</a>
+            </nav>
         </header>
 
-        <!-- INICIO -->
-        <main id="inicio" class="px-3">
+        <section id="inicio">
+            <img src="perfil.jpg" class="perfil-img" alt="Ilan Perfil">
+            <h1 class="display-4 fw-bold">Hola, soy Ilan Auzunbud</h1>
+            <h2 class="h3">Fundamentos de la programación</h2>
+            <p class="lead mt-3">Estudio en la escuela <strong>ORT Rosario</strong>.</p>
+            
+            <div class="social-media mt-3 mb-4">
+                <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            </div>
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZdlHVwqECdSnpSNQhoMEZ2njjK7qce9CI5w&s" class="profile-img" alt="perfil">
-            <h1>Ilan Auzunbud</h1>
-            <h2>Bienvenido a mi Portfolio</h2>
+            <a href="#proyectos" class="btn btn-custom btn-lg">Ver Proyectos</a>
+        </section>
 
-            <p class="lead">
-               <spand id="estudio">Estudio Fundamentos de la programación en la escuela ORT Rosario</spand> 
-            </p>
-
-            <p>
-                HTML · CSS · Bootstrap
-            </p>
-
-            <p class="lead">
-                <a href="#proyectos" class="btn btn-lg btn-custom fw-bold">Ver Proyectos</a>
-            </p>
-
-            <p>
-                <a href="https://github.com/" target="_blank" class="text-white">GitHub</a> |
-                <a href="https://linkedin.com/" target="_blank" class="text-white">LinkedIn</a> |
-                <a href="https://instagram.com/" target="_blank" class="text-white">Instagram</a>
-            </p>
-
-        </main>
-
-        <!-- PROYECTOS -->
         <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            <p>Proyecto: Portfolio con Bootstrap</p>
+            <h2 class="display-5 fw-bold mb-4">Mis Proyectos</h2>
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-6 border border-info p-4 rounded">
+                    <h3 class="h4">Portfolio con Bootstrap</h3>
+                    <p class="text-secondary small">HTML · CSS · Bootstrap</p>
+                </div>
+            </div>
         </section>
 
-        <!-- CONTACTO -->
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: 50241697@escuelabialik.edu.ar</p>
+            <h2 class="display-5 fw-bold mb-4">Contacto</h2>
+            <p class="azul-llan fs-4 mt-3">50241697@escuelabialik.edu.ar</p>
         </section>
 
-        <footer class="mt-auto text-white-50">
-            <p>Hecho con Bootstrap · 2026</p>
-        </footer>
+        
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
